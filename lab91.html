@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+</head>
+
+<body>
+    <h2>calculator:</h2>
+    <center>
+        <table border="l" width="40%">
+            <tr>
+                <th>Number1:</th>
+                <td><input id="g1" type="number"></td>
+                <td><button onclick="myfunction()">Calculate</button></td>
+            </tr>
+            <tr>
+                <th>Number2:</th>
+                <td><input id="g2" type="number"></td>
+                <td><button onclick="myfunc()">Reset</button></td>
+            </tr>
+            <tr>
+                <th>Addition</th>
+                <td>
+                    <p id="n1"></p>
+                </td>
+            </tr>
+            <tr>
+                <th>Subtraction</th>
+                <td>
+                    <p id="n2"></p>
+                </td>
+            </tr>
+            <tr>
+                <th>Multiplication</th>
+                <td>
+                    <p id="n3"></p>
+                </td>
+            </tr>
+            <tr>
+                <th>Division</th>
+                <td>
+                    <p id="n4"></p>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        function myfunction() {
+            var e1 = document.getElementById("g1").value;
+            var e2 = document.getElementById("g2").value;
+            e1 = parseInt(e1);
+            e2 = parseInt(e2);
+            var e3 = e1 + e2;
+            var e4 = e1 - e2;
+            var e5 = e1 * e2;
+            var e6 = e1 / e2;
+            document.getElementById("n1").innerHTML = e3;
+            document.getElementById("n2").innerHTML = e4;
+            document.getElementById("n3").innerHTML = e5;
+            document.getElementById("n4").innerHTML = e6;
+        }
+        function myfunc() {
+            var e1 = document.getElementById("g1").value;
+            var e2 = document.getElementById("g2").value;
+            e1 = 0;
+            e2 = 0;
+        }
+    </script>
+</body>
+</html>

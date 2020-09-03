@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan</title>
+</head>
+<body>
+    <h2>Conversion of temperature:</h2>
+    celcius: <input type="number" id="temp1"><br><br>
+    <p id="demo"></p><br>
+    fahreiheit: <input type="number" id="temp2"><br><br>
+    <p id="demo1"></p><br>
+    <button onclick="convert()">convert</button>
+
+    <h2>Ticket Booking System: </h2>
+
+    Number of adult:<input type="number" id="n1"><br>
+
+    Number of senior citizen:<input type="number" id="n2"><br>
+
+    Number of child:<input type="number" id="n3"><br>
+    <p id="h1"></p><br>
+
+    <button onclick="cost()">Cost</button>
+
+    <h2>Conversion to rupees:</h2>
+
+    dollar: <input type="number" id="d1"><br>
+    <p id="dollar"></p>
+
+    Euro: <input type="number" id="d2"><br>
+    <p id="euro"></p>
+
+    Peso: <input type="number" id="d3"><br>
+    <p id="peso"></p>
+
+    Pound: <input type="number" id="d4"><br>
+    <p id="pound"></p>
+
+    Yen: <input type="number" id="d5"><br>
+    <p id="yen"></p>
+
+    <button onclick="converttorupee()">To Rupees</button>
+
+</body>
+
+<script>
+    function convert() {
+        var c = document.getElementById("temp1").value;
+        c = parseInt(c);
+        var f = document.getElementById("temp2").value;
+        f = parseInt(f);
+        var c1 = document.getElementById("demo1");
+        var f1 = document.getElementById("demo");
+        var f2 = (c * (9/5)) + 32;
+        f1.innerHTML = f2;
+        var c2 = (f - 32)*(5/9);
+        c1.innerHTML = c2;
+    }
+
+    function cost() {
+        var c1 = document.getElementById("n1").value;
+        c1 = parseInt(c1);
+        var c2 = document.getElementById("n2").value;
+        c2 = parseInt(c2);
+        var c3 = document.getElementById("n3").value;
+        c3 = parseInt(c3);
+        var h2 = document.getElementById("h1");
+
+        var h3 = 50 * c1 + 30 * c2 + 20 * c3;
+        h2.innerHTML = h3
+    }
+
+    function converttorupee() {
+        var b1 = document.getElementById("d1").value;
+        b1 = parseInt(b1);
+        var b2 = document.getElementById("d2").value;
+        b2 = parseInt(b2);
+        var b3 = document.getElementById("d3").value;
+        b3 = parseInt(b3);
+        var b4 = document.getElementById("d4").value;
+        b4 = parseInt(b4);
+        var b5 = document.getElementById("d5").value;
+        b5 = parseInt(b5);
+
+        var d0 = document.getElementById("dollar");
+        var eu = document.getElementById("euro");
+        var pe = document.getElementById("peso");
+        var po = document.getElementById("pound");
+        var ye = document.getElementById("yen");
+
+        var m1 = 73.28 * b1;
+        d0.innerHTML = m1;
+        var m2 = 86.68 * b2;
+        eu.innerHTML = m2;
+        var m3 = 1.51 * b3;
+        pe.innerHTML = m3;
+        var m4 = 97.44 * b4;
+        po.innerHTML = m4;
+        var m5 = 0.69 * b5;
+        ye.innerHTML = m5;
+    }
+</script>
+</html>
